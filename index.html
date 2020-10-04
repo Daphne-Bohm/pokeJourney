@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="styles/style.css">
+	<title>Pokédex with PokéAPI</title>
+</head>
+<body>
+
+	<header>
+		<h1>Your Pokedex Journey</h1>
+		<div class="hamburger" id="hamburger">
+			<img src="img/pokeball.png" alt="click pokeball to see the pokemon">
+		</div>
+	</header>
+
+	<div class="main-container">
+	
+	<!-- POKEDEX -->
+		<div class="pokedex">
+		<!-- 1. LEFT PANEL -->
+
+			<div class="pokedex-left">
+				<!--a.top-->
+				<div class="pokedex-left-top">
+					<div class="pokedex-left-blue-light">
+						<div class="pokedex-left-blue-shadow-one"></div>
+						<div class="pokedex-left-blue-shadow-two"></div>
+						<div class="pokedex-left-blue-shadow-three"></div>
+					</div>
+					<div class="pokedex-left-red-light"></div>
+					<div class="pokedex-left-yellow-light"></div>
+					<div class="pokedex-left-green-light"></div>
+					<div class="pokedex-left-line"></div>
+				</div>
+				<!--b.middle-->
+				<div class="pokedex-left-middle">
+					<div class="pokedex-left-white-schreen" id="white-screen"></div>
+				</div>
+				<!--c.bottom-->
+				<div class="pokedex-left-bottom">
+					<button class="pokedex-left-on-off-btn" id="on-off-btn"></button>
+					<div class="pokedex-left-green-btn" id="green-btn"></div>
+				</div>
+		<!-- 2. MIDDLE PANEL -->
+				<div class="pokedex-middle">
+					<div class="pokedex-middle-between">
+						<div class="pokedex-middle-line-one"></div>
+						<div class="pokedex-middle-line-two"></div>
+					</div>
+				</div>
+			</div>
+		
+
+		<!-- 3. RIGHT PANEL -->
+			<div class="pokedex-right">
+				<div class="pokedex-right-black-screen" id="black-screen">
+				</div>
+				<div class="pokedex-right-blue-bnts">
+					<div class="pokedex-right-blue-bnts-top">
+						<div class="pokedex-right-blue-btn-one"></div>
+						<div class="pokedex-right-blue-btn-two"></div>
+						<div class="pokedex-right-blue-btn-three"></div>
+						<div class="pokedex-right-blue-btn-four"></div>
+					</div>
+					<div class="pokedex-right-blue-bnts-bottom">
+						<div class="pokedex-right-blue-btn-five"></div>
+						<div class="pokedex-right-blue-btn-six"></div>
+						<div class="pokedex-right-blue-btn-seven"></div>
+						<div class="pokedex-right-blue-btn-eight" id="help-btn">HELP</div>
+					</div>
+				</div>
+				<div class="white-btns-container" id="white-btns">
+					<div class="pokedex-right-white-btn-left" id="white-btn-left"></div>
+					<div class="pokedex-right-white-btn-right" id="white-btn-right"></div>
+				</div>
+			</div>
+		</div>
+
+	<!-- POKEMON GRASS PICKACHU -->
+		<div class="container-grass-counter">
+			<div class="grass" id="grass">
+				<img src="img/pickachu.png" alt="pickachu" id="pickachu">		
+			</div>
+			<div class="counter">Counter Pokémon: <span id="counter"></span></div>
+		</div>
+	</div>
+
+	<!-- CAUGHT MESSAGE -->
+	<div class="caught-pokemon-text" id="caught"></div>
+
+	<!-- RESTART GAME BUTTON -->
+	<button class="restart-game-btn" id="restart-btn">Restart Game?</button>
+
+	<!-- POP UP POKEBALL -->
+	<div class="pop-up-pokeball" id="pokeball">
+		<div class="pokeball-line-left"></div>
+		<div class="pokeball-line-right"></div>
+		<div class="pokeball-circle">
+			<div class="pokeball-inner-circle"></div>
+		</div>
+	</div>
+
+	<!-- ALL POKEMON MENU -->
+	<div class="container-pokemons">
+		<ol class="pokemons" id="pokemons"></ol>
+	</div>
+
+	<script src="script.js"></script>
+	
+</body>
+</html>
