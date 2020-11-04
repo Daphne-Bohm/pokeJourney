@@ -1,0 +1,17 @@
+#pokedex-journey-container{
+    display: none;
+}
+
+.main-container{
+    @include displayFlex(row, space-around);
+    margin-top: 10vh;
+}
+
+@media (max-width: 1200px) { 
+
+    .main-container{
+        @include displayFlex(column, space-around);
+        margin-top: 10vh;
+    }
+
+}

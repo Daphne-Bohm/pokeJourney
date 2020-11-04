@@ -1,0 +1,49 @@
+.loader{
+    position: relative;
+    width: 90px;
+    height: 90px;
+    margin: 45vh auto 0 auto;
+    .rotate{
+        border: 20px solid $white-color;
+        border-top: 20px solid $pokedex-color;
+        border-radius: 50%;
+        width: 90px;
+        height: 90px;
+        animation: load 3s linear infinite;
+    }
+    img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+    }
+}
+
+@keyframes load{
+    0% { 
+        transform: rotate(0deg);
+        border-top: 20px solid $pokedex-color;
+    }
+
+    25% { 
+        transform: rotate(90deg); 
+        border-top: 20px solid $pokedex-color; 
+    }
+
+    50% { 
+        transform: rotate(180deg); 
+        border-top: 20px solid $grass-color; 
+    }
+
+    75% { 
+        transform: rotate(270deg); 
+        border-top: 20px solid $grass-color; 
+    }
+
+    100% { 
+        transform: rotate(360deg); 
+        border-top: 20px solid $pokedex-color; 
+    }
+}

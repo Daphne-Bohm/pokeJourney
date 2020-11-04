@@ -1,0 +1,243 @@
+/*************************************POKEDEX LAYOUT***********************************/
+
+//pokedex
+.pokedex{
+    @include displayFlex(row, center);
+    margin-top: 2.5rem;
+    position: relative;
+}
+
+//pokedex-left
+.pokedex-left{
+    background-color: $pokedex-color;
+    width: 19rem;
+    height: 31rem;
+    border: 2px solid $black-color;
+    border-radius: 10px;
+    position: relative;
+    //TOP
+    .pokedex-left-blue-light{
+        width: 4.2rem;
+        height: 4.2rem;
+        border-radius: 50%;
+        background-color: $white-color;
+        position: absolute;
+        border: 2px solid $black-color;
+        left: 0.5rem;
+        top: 0.3rem;
+        .pokedex-left-blue-shadow-one{
+            width: 3.3rem;
+            height: 3.3rem;
+            border-radius: 50%;
+            background-color: #68D7D7;
+            border: 2px solid $black-color;
+            position: absolute;
+            top: 0.35rem;
+            left: 0.35rem;
+        }
+        .pokedex-left-blue-shadow-two{
+            width: 2.4rem;
+            height: 2.4rem;
+            border-radius: 50%;
+            background-color: #7FEDED;
+            position: absolute;
+            top: 0.50rem;
+            left: 0.75rem;
+        }
+        .pokedex-left-blue-shadow-three{
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: 50%;
+            background-color: #C8F4F4;
+            position: absolute;
+            top: 0.55rem;
+            left: 1.2rem;
+        }
+    }
+    .pokedex-left-red-light{
+        width: 1.5rem;
+        height: 1.5rem;
+        background-color: $darker-red-color;
+        border-radius: 50%;
+        border: 2px solid $black-color;
+        position: absolute;
+        left: 5.5rem;
+        top: 0.5rem;
+    }
+    .pokedex-left-yellow-light{
+        width: 1.5rem;
+        height: 1.5rem;
+        background-color: $darker-yellow-color;
+        border-radius: 50%;
+        border: 2px solid $black-color;
+        position: absolute;
+        left: 7.5rem;
+        top: 0.5rem;
+    }
+    .pokedex-left-green-light{
+        width: 1.5rem;
+        height: 1.5rem;
+        background-color: $darker-green-color;
+        border-radius: 50%;
+        border: 2px solid $black-color;
+        position: absolute;
+        left: 9.5rem;
+        top: 0.5rem;
+    }
+    .pokedex-left-line{
+        width: 20.8rem;
+        height: 3px;
+        background-color: $black-color;
+        position: absolute;
+        top: 5.6rem;
+    }
+    //MIDDLE
+    .pokedex-left-middle{
+        width: 15rem;
+        height: 13.3rem;
+        background-color: #CECCCC;
+        position: absolute;
+        border: 2px solid $black-color;
+        border-radius: 10px 10px 10px 25%;
+        top: 8rem;
+        left: 1.5rem;
+        .pokedex-left-white-schreen{
+            width: 11.6rem;
+            height: 9.2rem;
+            border: 2px solid $black-color;
+            position: relative;
+            top: 1.5rem;
+            left: 1.5rem;
+            border-radius: 10px 10px 10px 25%;
+        }
+    }
+    //BOTTOM
+    .pokedex-left-bottom{
+        position: relative;
+        .pokedex-left-on-off-btn{
+            width: 3.5rem;
+            height: 3.5rem;
+            border-radius: 50%;
+            background-color: $dark-grey-color;
+            font-size: 1.5rem;
+            cursor: pointer;
+            position: absolute;
+            top: 22.5rem;
+            left: 1.5rem;
+            outline: none;
+            border-color: $pokedex-color
+        }
+        .pokedex-left-green-btn{
+            width: 8rem;
+            height: 4.2rem;
+            border-radius: 10px;
+            top: 24rem;
+            left: 8.2rem;
+            position: absolute;
+            background-color: $grass-color;
+            border: 2px solid $black-color;
+            cursor: pointer;
+            font-size: 1.5rem;
+            color: white;
+            text-align: center;
+            padding-top: 1rem;
+        }
+    }
+//pokedex middle
+    .pokedex-middle{
+        background-color: $pokedex-color;
+        width: 3rem;
+        height: 27rem;
+        border: 2px solid $black-color;
+        border-radius: 15px;
+        margin-top: 4.3rem;
+        position: absolute;
+        left: 18rem;
+        z-index: 5;
+    }   
+}
+//pokedex right panel
+.pokedex-right{
+    background-color: $pokedex-color;
+    width: 19rem;
+    height: 25.4rem;
+    border: 2px solid $black-color;
+    border-radius: 10px;
+    margin-top: 5.9rem;
+    position: relative;
+    z-index: 1;
+    .pokedex-right-black-screen{
+        width: 14.8rem;
+        height: 10rem;
+        border-radius: 10px;
+        font-size: 0.9rem;
+        background-color: $dark-grey-color;
+        position: absolute;
+        top: 2rem;
+        left: 3rem;
+        border: 2px $black-color solid;
+        padding:0.5rem;
+        .pokedex-right-black-screen-help-text{
+            color: $white-color;
+            display: none;
+        }
+    }
+    .pokedex-right-blue-bnts{
+        width: 14rem;
+        height: 5rem;
+        border: 2px $black-color solid;
+        position: absolute;
+        top: 13rem;
+        left: 3.5rem;
+        border-radius: 5px;
+    }
+    .pokedex-right-blue-bnts-top{
+        display: flex;
+    }
+    .pokedex-right-blue-bnts-bottom{
+        display: flex;
+        #help-btn{
+            cursor: pointer;
+            color: $white-color;
+            font-size: 1.3rem;
+            text-align: center;
+            padding-top: 5px;
+        }
+    }
+    .pokedex-right-blue-btn-one,
+    .pokedex-right-blue-btn-two,
+    .pokedex-right-blue-btn-three,
+    .pokedex-right-blue-btn-four,
+    .pokedex-right-blue-btn-five,
+    .pokedex-right-blue-btn-six,
+    .pokedex-right-blue-btn-seven,
+    .pokedex-right-blue-btn-eight,
+    .pokedex-right-blue-btn-nine{
+        background-color: $blue-color;
+        width: 4rem;
+        height: 2.4rem;
+        border: 1px solid $black-color;
+    }
+    .pokedex-right-white-btn-left{
+        width: 4.5rem;
+        height: 2.8rem;
+        background-color: $white-color;
+        position: absolute;
+        top: 19rem;
+        left: 3.5rem;
+        border-radius: 5px;
+        border: 2px $black-color solid;
+        cursor: pointer;
+    }
+    .pokedex-right-white-btn-right{
+        width: 4.5rem;
+        height: 2.8rem;
+        background-color: $white-color;
+        position: absolute;
+        top: 19rem;
+        left: 7.9rem;
+        border-radius: 5px;
+        border: 2px $black-color solid;
+        cursor: pointer;
+    }
+}

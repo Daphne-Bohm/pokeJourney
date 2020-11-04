@@ -1,0 +1,57 @@
+/*********************************POKEMONS IN MENU*******************************/
+.pokemons{
+    display: none;
+    transform: scale(0);
+}
+
+.display{
+    z-index: 10;
+    transform: scale(1);
+    background-color: $pokedex-color;
+    width: 95%;
+    padding: 2rem;
+    top: 8rem;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 5rem;
+    .card{
+        position: relative;
+        background-color: whitesmoke;
+        text-align: center;
+        list-style: none;
+        height: 15rem;
+        padding: 2rem 0 15rem 0;
+        border: 2px solid $black-color;
+        box-shadow: 2px 2px 8px $black-color;
+        border-radius: 1%;
+        line-height: 1.6;
+    }
+    .card-id{
+        position: absolute;
+        top: 0rem;
+        left: 1.5rem;
+        background-color: $grass-color;
+        width: 4rem;
+        height: 5rem;
+        border-radius: 0 0 10% 10%;
+        border-left: 2px solid $black-color;
+        border-right: 2px solid $black-color;
+        border-bottom: 2px solid $black-color;
+        font-size: 2.8rem;
+        color: whitesmoke;
+    }
+    .card-title{
+        font-size: 2.4rem;
+    }
+    .card-subtitle{
+        color: $blue-color;
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+}

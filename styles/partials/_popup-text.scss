@@ -1,0 +1,20 @@
+
+.caught-pokemon-text{
+    //display: none;
+    position: absolute;
+    text-align: center;
+    left: 0;
+    right: 0;
+    top: 8rem;
+    font-size: 2.5rem;
+    text-shadow: 1px 1px 8px grey;
+    color: white;
+}
+
+// MEDIA
+@media (max-width: 1200px) { 
+    .caught-pokemon-text{
+        color: $white-color;
+        top: 89vh;
+    }
+}

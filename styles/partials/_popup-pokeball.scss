@@ -1,0 +1,106 @@
+.pop-up-pokeball{
+    display: none;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: -500px;
+    z-index: 1;
+    animation:  animate-pop-up 2s ease forwards,
+                shake 1.5s ease 2.5s forwards;
+    background: $white-color;
+    background: linear-gradient(360deg, $white-color 50%, rgba(233,12,12,1) 50%);
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    border: 4px solid $black-color;
+    .pokeball-line-left{
+        height: 5px;
+        top: 70px;
+        left: 0;
+        background-color: $black-color;
+        width: 50px;
+        position: absolute;
+    }
+    .pokeball-line-right{
+        height: 5px;
+        top: 70px;
+        right: 0;
+        background-color: $black-color;
+        width: 50px;
+        position: absolute;
+    }
+    .pokeball-circle{
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        width: 42px;
+        height: 42px;
+        border: 4px solid $black-color;
+        border-radius: 50%;
+        top: 53px;
+        background-color: $white-color;
+        .pokeball-inner-circle{
+            position: absolute;
+            margin-left: auto;
+            margin-right: auto;
+            left: 0;
+            right: 0;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            top: 6px;
+            background-color: $black-color;
+            animation: blink 3s ease 4.1s backwards;
+        }
+    }
+}
+
+// KEYFRAMES
+
+@keyframes animate-pop-up{
+    50%{ display: block; transform: translateY(750px); }
+    60%{ display: block; transform: translateY(700px); }
+    70%{ display: block; transform: translateY(725px); }
+    80%{ display: block; transform: translateY(700px); }
+    90%{ display: block; transform: translateY(710px); }
+    100%{ display: block; transform: translateY(700px); }
+}
+
+@keyframes shake{
+    0%{ display: block; transform: translateY(700px) rotateZ(0deg); }
+    10%{ display: block; transform: translateY(700px) rotateZ(25deg); }
+    20%{ display: block; transform: translateY(700px) rotateZ(0deg); }
+    30%{ display: block; transform: translateY(700px) rotateZ(-25deg); }
+    40%{ display: block; transform: translateY(700px) rotateZ(0deg); }
+    50%{ display: block; transform: translateY(700px) rotateZ(25deg); }
+    60%{ display: block; transform: translateY(700px) rotateZ(0deg); }
+    70%{ display: block; transform: translateY(700px) rotateZ(-25deg); }
+    80%{ display: block; transform: translateY(700px) rotateZ(0deg); }
+    90%{ display: block; transform: translateY(700px) rotateZ(25deg); }
+    100%{ display: block; transform: translateY(700px) rotateZ(0deg); }
+}
+
+@keyframes blink{
+    12% { background-color: $pokedex-color; }
+    25% { background-color: $black-color; }
+    37% { background-color: $pokedex-color; }
+    50% { background-color: $black-color; }
+    62% { background-color: $pokedex-color; }
+    75% { background-color: $black-color; }
+    87% { background-color: $pokedex-color; }
+    100% { background-color: $black-color; }
+}
+
+
+// MEDIA
+
+@media (max-width: 1200px) { 
+    .pop-up-pokeball{
+        display: none;
+        top: 225px;
+    }
+}

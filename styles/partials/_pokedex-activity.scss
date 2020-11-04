@@ -1,0 +1,109 @@
+/*********************************POKEDEX ACTIVITY*******************************/
+
+.white-screen-turn-on{
+    background-color: $white-color;
+    animation: whiteScreen 1.5s linear 0.5s backwards;
+}
+
+.light-up-big-light{
+    animation: lightUpBig 1.5s linear 0.5s backwards;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+.light-up-small-light-red{
+    animation: lightUpSmallRed 1.5s linear 0.5s backwards;
+}
+.light-up-small-light-green{
+    animation: lightUpSmallGreen 1.5s linear 0.5s backwards;
+}
+.light-up-small-light-yellow{
+    animation: lightUpSmallYellow 1.5s linear 0.5s backwards;
+}
+
+.clicked{
+    animation: clickGreenBtn 1.5s linear 0.5s forwards;
+}
+
+@keyframes whiteScreen{
+    25%{
+        border-color: $white-color;
+    }
+    50%{
+        border-color: $black-color;
+    }
+    75%{
+        border-color: $white-color;
+    }
+}
+
+@keyframes lightUpBig{
+    25%{
+        border-color: $white-color;
+        transform: scale(1.1);
+    }
+    50%{
+        border-color: $black-color;
+        transform: scale(1);
+    }
+    75%{
+        border-color: $white-color;
+        transform: scale(1.1);
+    }
+}
+
+@keyframes lightUpSmallRed{
+    25%{
+        transform: scale(1.1);
+        background-color: $red-color;
+    }
+    50%{
+        transform: scale(1);
+        background-color: $darker-red-color;
+    }
+    75%{
+        transform: scale(1.1);
+        background-color: $red-color;
+    }
+}
+
+@keyframes lightUpSmallGreen{
+    25%{
+        transform: scale(1.1);
+        background-color: $green-color;
+    }
+    50%{
+        transform: scale(1);
+        background-color: $darker-green-color;
+    }
+    75%{
+        transform: scale(1.1);
+        background-color: $green-color;
+    }
+}
+
+@keyframes lightUpSmallYellow{
+    25%{
+        transform: scale(1.1);
+        background-color: $yellow-color;
+    }
+    50%{
+        transform: scale(1);
+        background-color: $darker-yellow-color;
+    }
+    75%{
+        transform: scale(1.1);
+        background-color: $yellow-color;
+    }
+}
+
+@keyframes clickGreenBtn{
+    0%{
+        border-color: $white-color;
+        background-color: #60d14c;
+    }
+    100%{
+        border-color: $black-color;
+        background-color: #60d14c;
+    }
+}

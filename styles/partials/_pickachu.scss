@@ -1,0 +1,27 @@
+/*********************************PICKACHU*******************************/
+
+.grass{
+    background: url('../img/grass.png') no-repeat center;
+    width: 320px;
+    height: 250px;
+    border: 2px $black-color solid;
+    background-color: #69AB5E;
+}
+
+.counter{
+    margin-top: 2rem;
+    font-size: 2rem;
+    text-align: right;
+    color: $white-color;
+    text-align: start;
+    margin-bottom: 50px;
+}
+
+
+@media (max-width: 1200px) { 
+
+    .grass{
+        margin-top: 125px;
+    }
+
+}

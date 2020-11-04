@@ -1,0 +1,18 @@
+/*********************************RESTART BUTTON*******************************/
+
+.restart-game-btn{
+    display: none;
+    position: absolute;
+    top: 81vh;
+    left: 78vw;
+    background-color: $pokedex-color;
+    padding: 1rem;
+    font-size: 2rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    &:hover{
+        color: $white-color;
+        transform: scale(1.1);
+    }
+}

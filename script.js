@@ -1,6 +1,9 @@
 /********************************************************************************
  *                         GLOBAL VARS + SELECTORS                              *
 *********************************************************************************/
+const loader = document.getElementById('loader');
+const content = document.getElementById('pokedex-journey-container');
+
 const pickachu = document.getElementById('pickachu');
 const grass = document.getElementById('grass');
 const containerForThePokemons = document.getElementById('pokemons');
@@ -49,10 +52,11 @@ let index = 0;
 *********************************************************************************/
 
 const getPokemon = async () => {
+    
     //global vars
     const promises = [];
-    let randomPokemon;
     let id;
+
     //poke api
     for(let i = 1; i <= numberOfPokemon; i++){
         const url = `https://pokeapi.co/api/v2/pokemon/${i}`
@@ -60,6 +64,15 @@ const getPokemon = async () => {
         const data = await res.json();
         promises.push(data);
     }
+
+    //when pokemon are fetched, delete loader and show pokedex when 2.5 sec are passed
+    if(promises){
+        setTimeout(() => {
+            loader.style.display = 'none';
+            content.style.display = 'block';
+        }, 2500);
+    }
+
     //looping through promises
     Promise.all(promises).then( results => {
         const pokemon = results.map( data => ({
@@ -70,14 +83,12 @@ const getPokemon = async () => {
             types: data.types.map( type => type.type.name).join(', ') 
         }))
 
-        //saving to the localstorage because async vs synch
         for(let i = 0; i <= pokemon.length; i++){
             id = i;
             localStorage.setItem(`pokemon`, JSON. stringify(pokemon));
         }
 
         displayPokemonInPokemonMenu(pokemon);
-
     })
 }
 
@@ -92,8 +103,6 @@ const displayPokemonInPokemonMenu = (pokemons) => {
     const array = Object.entries(pokemons);
 
     array.forEach( pokemon => {
-
-    //console.log(pokemon[1].name)
 
         let li = document.createElement('li');
         li.classList.add('card');
@@ -351,7 +360,7 @@ function counterOfPokemon(foundPokemon){
     //if lenght is 0 then counter 0
     if(foundPokemon.length === 0){
         counter.innerHTML = 0;
-    //if lengt is bigger then 0 then add pokemon
+    //if length is bigger then 0 then add pokemon but smaller then 150
     }else if(foundPokemon.length > 0 && foundPokemon.length < numberOfPokemon){
         counter.innerHTML = foundPokemon.length;
     //if counter is numbersOfPokemon (150) then special message

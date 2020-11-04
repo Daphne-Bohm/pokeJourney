@@ -1,17 +1,101 @@
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;1,300&display=swap");
 * {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: 'Bebas Neue', cursive;
+  font-family: 'Poppins', sans-serif;
 }
 
-/*********************************HEADER*******************************/
+body {
+  background: url("../img/bg-1.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+.loader {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  margin: 45vh auto 0 auto;
+}
+
+.loader .rotate {
+  border: 20px solid #fff;
+  border-top: 20px solid #DB4343;
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  -webkit-animation: load 3s linear infinite;
+          animation: load 3s linear infinite;
+}
+
+.loader img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+@-webkit-keyframes load {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    border-top: 20px solid #DB4343;
+  }
+  25% {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+    border-top: 20px solid #DB4343;
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    border-top: 20px solid #69AB5E;
+  }
+  75% {
+    -webkit-transform: rotate(270deg);
+            transform: rotate(270deg);
+    border-top: 20px solid #69AB5E;
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    border-top: 20px solid #DB4343;
+  }
+}
+
+@keyframes load {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    border-top: 20px solid #DB4343;
+  }
+  25% {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+    border-top: 20px solid #DB4343;
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    border-top: 20px solid #69AB5E;
+  }
+  75% {
+    -webkit-transform: rotate(270deg);
+            transform: rotate(270deg);
+    border-top: 20px solid #69AB5E;
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    border-top: 20px solid #DB4343;
+  }
+}
+
 header {
   background: #DB4343;
-  width: 100%;
-  background: linear-gradient(68deg, #DB4343 37%, ivory 100%);
   padding: 1.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -26,20 +110,21 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: 2px #000 solid;
 }
 
 header h1 {
   color: #fff;
   font-size: 2.3rem;
-  text-shadow: 2px 2px 8px #000;
 }
 
 header .hamburger {
   cursor: pointer;
 }
 
-/*********************************MAIN-CONTAINER*******************************/
+#pokedex-journey-container {
+  display: none;
+}
+
 .main-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -53,7 +138,25 @@ header .hamburger {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 2rem;
+  margin-top: 10vh;
+}
+
+@media (max-width: 1200px) {
+  .main-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 10vh;
+  }
 }
 
 /*************************************POKEDEX LAYOUT***********************************/
@@ -249,7 +352,7 @@ header .hamburger {
   width: 14.8rem;
   height: 10rem;
   border-radius: 10px;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   background-color: #282828;
   position: absolute;
   top: 2rem;
@@ -332,7 +435,7 @@ header .hamburger {
   cursor: pointer;
 }
 
-/*********************************POKEDEX INTERACTIVITY*******************************/
+/*********************************POKEDEX ACTIVITY*******************************/
 .white-screen-turn-on {
   background-color: #fff;
   -webkit-animation: whiteScreen 1.5s linear 0.5s backwards;
@@ -570,9 +673,18 @@ header .hamburger {
   margin-top: 2rem;
   font-size: 2rem;
   text-align: right;
+  color: #fff;
+  text-align: start;
+  margin-bottom: 50px;
 }
 
-/*********************************POKEMONS*******************************/
+@media (max-width: 1200px) {
+  .grass {
+    margin-top: 125px;
+  }
+}
+
+/*********************************POKEMONS IN MENU*******************************/
 .pokemons {
   display: none;
   -webkit-transform: scale(0);
@@ -639,7 +751,6 @@ header .hamburger {
   font-weight: bold;
 }
 
-/*********************************POP-UP TEXT*******************************/
 .caught-pokemon-text {
   position: absolute;
   text-align: center;
@@ -648,6 +759,14 @@ header .hamburger {
   top: 8rem;
   font-size: 2.5rem;
   text-shadow: 1px 1px 8px grey;
+  color: white;
+}
+
+@media (max-width: 1200px) {
+  .caught-pokemon-text {
+    color: #fff;
+    top: 89vh;
+  }
 }
 
 /*********************************RESTART BUTTON*******************************/
@@ -671,7 +790,6 @@ header .hamburger {
           transform: scale(1.1);
 }
 
-/*********************************POP-UP POKEBALL*******************************/
 .pop-up-pokeball {
   display: none;
   position: absolute;
@@ -975,9 +1093,16 @@ header .hamburger {
   }
 }
 
-/*********************************JS INTERACTIVITY*******************************/
+@media (max-width: 1200px) {
+  .pop-up-pokeball {
+    display: none;
+    top: 225px;
+  }
+}
+
+/*********************************JS ACTIVITY*******************************/
 .found {
-  opacity: 0.8;
+  opacity: 0.5;
 }
 
 .display-pokeball {

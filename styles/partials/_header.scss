@@ -1,0 +1,13 @@
+
+header{
+    background: $pokedex-color;
+    padding: 1.5rem;
+    @include displayFlex(row, space-between);
+    h1{
+        color: $white-color;
+        font-size: 2.3rem;
+    }
+    .hamburger{
+        cursor: pointer;
+    }
+}
