@@ -1,7 +1,8 @@
+'use strict'
+
 /********************************************************************************
  *                         GLOBAL VARS + SELECTORS                              *
 *********************************************************************************/
-'use strict'
 
 const loaderText = document.getElementById('loader-text');
 const loader = document.getElementById('loader');

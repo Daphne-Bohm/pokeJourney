@@ -1,13 +1,11 @@
-/*************************************POKEDEX LAYOUT***********************************/
-
-//pokedex
+// pokedex
 .pokedex{
     @include displayFlex(row, center);
     margin-top: 2.5rem;
     position: relative;
 }
 
-//pokedex-left
+// pokedex-left
 .pokedex-left{
     background-color: $pokedex-color;
     width: 19rem;
@@ -15,7 +13,7 @@
     border: 2px solid $black-color;
     border-radius: 10px;
     position: relative;
-    //TOP
+    // TOP
     .pokedex-left-blue-light{
         width: 4.2rem;
         height: 4.2rem;
@@ -91,7 +89,7 @@
         position: absolute;
         top: 5.6rem;
     }
-    //MIDDLE
+    // MIDDLE
     .pokedex-left-middle{
         width: 15rem;
         height: 13.3rem;
@@ -111,7 +109,7 @@
             border-radius: 10px 10px 10px 25%;
         }
     }
-    //BOTTOM
+    // BOTTOM
     .pokedex-left-bottom{
         position: relative;
         .pokedex-left-on-off-btn{
@@ -143,7 +141,7 @@
             padding-top: 1rem;
         }
     }
-//pokedex middle
+// pokedex middle
     .pokedex-middle{
         background-color: $pokedex-color;
         width: 3rem;
@@ -156,7 +154,7 @@
         z-index: 5;
     }   
 }
-//pokedex right panel
+// pokedex right panel
 .pokedex-right{
     background-color: $pokedex-color;
     width: 19rem;

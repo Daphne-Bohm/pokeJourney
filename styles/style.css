@@ -165,7 +165,6 @@ header .hamburger {
   }
 }
 
-/*************************************POKEDEX LAYOUT***********************************/
 .pokedex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -441,7 +440,6 @@ header .hamburger {
   cursor: pointer;
 }
 
-/*********************************POKEDEX ACTIVITY*******************************/
 .white-screen-turn-on {
   background-color: #fff;
   -webkit-animation: whiteScreen 1.5s linear 0.5s backwards;
@@ -666,7 +664,6 @@ header .hamburger {
   }
 }
 
-/*********************************PICKACHU*******************************/
 .grass {
   background: url("../img/grass.png") no-repeat center;
   width: 320px;
@@ -690,7 +687,6 @@ header .hamburger {
   }
 }
 
-/*********************************POKEMONS IN MENU*******************************/
 .pokemons {
   display: none;
   -webkit-transform: scale(0);
@@ -775,7 +771,6 @@ header .hamburger {
   }
 }
 
-/*********************************RESTART BUTTON*******************************/
 .restart-game-btn {
   display: none;
   position: absolute;
