@@ -1,8 +1,14 @@
+.loader-text{
+    text-align: center;
+    margin: 33vh auto 80px auto;
+    color: $white-color;
+}
+
 .loader{
     position: relative;
     width: 90px;
     height: 90px;
-    margin: 45vh auto 0 auto;
+    margin: auto;
     .rotate{
         border: 20px solid $white-color;
         border-top: 20px solid $pokedex-color;

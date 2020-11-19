@@ -12,11 +12,17 @@ body {
   background-size: cover;
 }
 
+.loader-text {
+  text-align: center;
+  margin: 33vh auto 80px auto;
+  color: #fff;
+}
+
 .loader {
   position: relative;
   width: 90px;
   height: 90px;
-  margin: 45vh auto 0 auto;
+  margin: auto;
 }
 
 .loader .rotate {
@@ -358,7 +364,7 @@ header .hamburger {
   top: 2rem;
   left: 3rem;
   border: 2px #000 solid;
-  padding: 0.5rem;
+  padding: 0.4rem;
 }
 
 .pokedex-right .pokedex-right-black-screen .pokedex-right-black-screen-help-text {

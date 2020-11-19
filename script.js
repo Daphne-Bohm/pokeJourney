@@ -1,6 +1,9 @@
 /********************************************************************************
  *                         GLOBAL VARS + SELECTORS                              *
 *********************************************************************************/
+'use strict'
+
+const loaderText = document.getElementById('loader-text');
 const loader = document.getElementById('loader');
 const content = document.getElementById('pokedex-journey-container');
 
@@ -53,7 +56,7 @@ let index = 0;
 
 const getPokemon = async () => {
     
-    //global vars
+    // vars
     const promises = [];
     let id;
 
@@ -68,6 +71,7 @@ const getPokemon = async () => {
     //when pokemon are fetched, delete loader and show pokedex when 2.5 sec are passed
     if(promises){
         setTimeout(() => {
+            loaderText.style.display = 'none';
             loader.style.display = 'none';
             content.style.display = 'block';
         }, 2500);
@@ -443,7 +447,7 @@ function saveRP(fp, rp){
  *                              WHITE BUTTONS                                   *
 *********************************************************************************/
 
-function showCaughtPokemonInPokedex(){
+function showCaughtPokemonInPokedex(caughtPokemon){
     let name = caughtPokemon[index].name;
     let id = (caughtPokemon[index].id).toString();
     let abilities = caughtPokemon[index].abilities;
@@ -457,21 +461,21 @@ function showCaughtPokemonInPokedex(){
 }
 
 function nextPokemon(){
-    caughtPokemon = JSON.parse(localStorage.getItem('foundPokemon'));
+    let caughtPokemon = JSON.parse(localStorage.getItem('foundPokemon'));
     if( index >= caughtPokemon.length - 1){
         index = -1;
     }
     index++;
-    return showCaughtPokemonInPokedex();
+    return showCaughtPokemonInPokedex(caughtPokemon);
 }
 
 function prevPokemon(){
-    caughtPokemon = JSON.parse(localStorage.getItem('foundPokemon'));
+    let caughtPokemon = JSON.parse(localStorage.getItem('foundPokemon'));
     if(index <= 0){
         index = caughtPokemon.length;
     }
     index--;
-    return showCaughtPokemonInPokedex();
+    return showCaughtPokemonInPokedex(caughtPokemon);
 }
 
 whiteBtns.addEventListener('click', (e) => {
@@ -493,6 +497,6 @@ whiteBtns.addEventListener('click', (e) => {
 *********************************************************************************/
 
 helpBtn.addEventListener('click', () => {
-    blackScreen.innerHTML = 'Click the on/off button to turn the pokedex on. Click on the green button to use the arrow keys to move Pickachu and find all the 150 pokemon. Use the white buttons to look throuh the pokedex.';
+    blackScreen.innerHTML = `Click the 'on button' to turn the pokedex on. First click on the green button, then use the arrow keys to move Pickachu and find all the 150 pokemon. Use the white buttons to look throuh the pokedex.`;
     blackScreen.style.color = 'white';
 })
