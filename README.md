@@ -6,7 +6,7 @@ For this project I used the poké API (https://pokeapi.co/) to obtain data for t
 
 ## Where can you find the game?
 
-The project has been deployed on Heroku and can be viewed here: http://yourpokedexjourney.herokuapp.com/
+The project has been deployed on Github and can be viewed here: https://daphne-bohm.github.io/pokejourney/
 
 ## How does the game work?
 
